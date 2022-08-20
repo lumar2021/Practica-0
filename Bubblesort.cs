@@ -1,36 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
 
 class Program
 {
     static void Main(string [] args)
     {
-      var timer = new Stopwatch();
-    timer.Start();
+
+    var clock = new Stopwatch();
+    clock.Start();
     bubblesort();
-    timer.Stop();
+    clock.Stop();
 
-
-
-  
-Console.WriteLine(timer.Elapsed.TotalSeconds);
-Console.WriteLine(timer.Elapsed.TotalMilliseconds);
-Console.WriteLine(timer.Elapsed.ToString());
-
-
+    Console.WriteLine(clock.Elapsed.TotalSeconds);
+    Console.WriteLine(clock.Elapsed.TotalMilliseconds);
+    Console.WriteLine(clock.Elapsed.ToString());
     }
-
     public static void bubblesort()
     {
-int numero=100000;
-            int[] array=new int[numero];
-            Random rnd = new Random();
 
+int numero=1000;
+            int[] array=new int[numero];
+            Random random = new Random();
 
             for (int j =0; j < numero; j++)
             {
-                array[j]=rnd.Next();
-
+                array[j]=random.Next();
             }
 
              for (int j = 0; j <= array.Length - 2; j++) {
@@ -38,30 +31,15 @@ int numero=100000;
             for (int i = 0; i <= array.Length - 2; i++) {
 
                if (array[i] > array[i + 1]) {
-                  int temp= array[i + 1];
+                  int temporal= array[i + 1];
                   array[i + 1] = array[i];
-                  array[i] = temp;
+                  array[i] = temporal;
 
                }
             }
          }
-
-
-
-
-
-
-
     }
 }
-
-
-            
-    
-
-       
-  //B: Run stuff you want timed
-
  
 
 
