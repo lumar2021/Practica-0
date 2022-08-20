@@ -1,10 +1,10 @@
 using System.Diagnostics;
-class Program 
+class Quick 
 {
     public static void Main(string[] args)
     {
 
-        int number=10000000;
+        int number=1000000;
             int[] array=new int[number];
             Random random = new Random();
 
